@@ -1,0 +1,47 @@
+### Major Roles in Data Domain ###
+
+1. **Data Analyst**
+   - **Skills:** SQL, Excel, data visualization, basic statistical knowledge.
+   - **Responsibilities:** Analyze data to extract actionable insights, create reports and dashboards, and support decision-making processes.
+
+2. **Data Scientist**
+   - **Skills:** Programming (Python/R), machine learning, advanced statistics, data wrangling.
+   - **Responsibilities:** Develop predictive models, perform deep data analysis, and create algorithms to solve complex business problems.
+
+3. **Machine Learning Engineer**
+   - **Skills:** Deep learning, algorithm optimization, programming, software engineering.
+   - **Responsibilities:** Design, build, and deploy machine learning models and systems, optimize algorithms for performance and scalability.
+
+4. **Data Engineer**
+   - **Skills:** Database management, ETL processes, big data technologies, data pipelines.
+   - **Responsibilities:** Develop and maintain data architecture, build data pipelines, and ensure data quality and accessibility for analysis.
+
+5. **Business Intelligence Analyst**
+   - **Skills:** Data analysis, BI tools (Tableau, Power BI), business knowledge.
+   - **Responsibilities:** Create and manage BI reports, analyze business performance, and provide insights to support strategic decisions.
+
+### Programming Languages
+
+1. **Python**
+   - Widely used for data analysis, machine learning, and automation.
+   - Libraries: Pandas, NumPy, Scikit-Learn, TensorFlow, PyTorch.
+
+2. **R Programming**
+   - Specialized for statistical analysis and data visualization.
+   - Libraries: dplyr, ggplot2, caret, Shiny.
+
+### Tools
+
+1. **Anaconda**
+   - An open-source distribution for Python and R, making package management and deployment simpler.
+   - Includes Jupyter Notebook, JupyterLab, and other useful data science tools.
+
+2. **Google Colab/Jupyter**
+   - Web-based interactive development environments for creating Jupyter notebooks.
+   - Great for collaboration and sharing of code and data analysis.
+
+3. **Git Version Control**
+   - A version control system for tracking changes in source code during software development.
+   - Essential for collaboration, maintaining code history, and managing projects.
+
+Feel free to ask if you need more details or further refinement!
