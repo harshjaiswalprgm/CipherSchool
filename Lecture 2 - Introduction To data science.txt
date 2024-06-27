@@ -1,0 +1,27 @@
+1. **Understanding the Problem**
+    - Define the objectives clearly.
+    - Determine how to measure project success.
+    - Identify the problem type (e.g., classification, regression).
+
+2. **Gathering Relevant Data**
+    - Collect data from various sources.
+    - Ensure the data is relevant to the problem.
+    - Consider the volume, variety, velocity, and veracity of the data.
+
+3. **Data Preparation & EDA**
+    - EDA stands for Exploratory Data Analysis.
+    - Clean the data (handle missing values, remove duplicates).
+    - Perform exploratory analysis to understand the data.
+    - Prepare the data for error-free analysis.
+
+4. **Feature Engineering & Feature Extraction**
+    - Select the most relevant features.
+    - Create new features to improve model performance.
+    - Reduce dimensionality if the feature space is too large.
+    - Select the most important features for modeling.
+
+5. **Model Building & Deployment**
+    - Choose appropriate algorithms and train models.
+    - Validate model performance using cross-validation.
+    - Deploy the model for real-time use or batch processing.
+    - Continuously monitor and improve the model as needed.
