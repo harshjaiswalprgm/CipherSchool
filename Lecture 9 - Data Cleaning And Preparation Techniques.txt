@@ -1,0 +1,56 @@
+Sure, I'll rewrite the content in a professional way and correct any mistakes.
+
+---
+
+## Excel Functions
+
+### Text Functions
+
+1. **TRIM**: Removes all spaces from a text string except for single spaces between words.
+   - **Syntax**: `=TRIM(cell_name)`
+
+2. **PROPER**: Converts the first letter of each word in a text string to uppercase.
+   - **Syntax**: `=PROPER(cell_name)`
+
+3. **UPPER**: Converts all letters in a text string to uppercase.
+   - **Syntax**: `=UPPER(cell_name)`
+
+4. **LOWER**: Converts all letters in a text string to lowercase.
+   - **Syntax**: `=LOWER(cell_name)`
+
+### Text Manipulation Functions
+
+1. **LEFT**: Extracts a specified number of characters from the left side of a text string.
+   - **Syntax**: `=LEFT(cell_name, num_characters)`
+
+2. **MID**: Returns a specific number of characters from a text string, starting at a specified position.
+   - **Syntax**: `=MID(cell_name, start_position, num_characters)`
+
+3. **SEARCH**: Searches for a character or text string within another text string and returns the position of the first character of the found text.
+   - **Syntax**: `=SEARCH("text_to_find", cell_name)`
+
+4. **LEN**: Returns the number of characters in a text string.
+   - **Syntax**: `=LEN(cell_name)`
+
+5. **RIGHT**: Extracts a specified number of characters from the right side of a text string.
+   - **Syntax**: `=RIGHT(cell_name, num_characters)`
+
+### Text Combining Functions
+
+1. **CONCATENATE**: Combines two or more text strings into one.
+   - **Syntax**: `=CONCATENATE(cell_name1, cell_name2)`
+
+2. **TEXTJOIN**: Combines text from multiple ranges, using a delimiter that you specify between each text value.
+   - **Syntax**: `=TEXTJOIN("delimiter", ignore_empty, cell_name1, cell_name2, ...)`
+
+### Conditional Logical Functions
+
+1. **IF**: Returns one value if a condition you specify evaluates to TRUE, and another value if it evaluates to FALSE.
+   - **Syntax**: `=IF(condition, value_if_true, value_if_false)`
+
+2. **IFERROR**: Returns a value you specify if a formula evaluates to an error; otherwise, it returns the result of the formula.
+   - **Syntax**: `=IFERROR(value, value_if_error)`
+
+---
+
+This should provide a clear and professional explanation of the Excel functions along with their correct syntax.
