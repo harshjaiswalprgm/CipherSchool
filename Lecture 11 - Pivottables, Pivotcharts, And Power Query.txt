@@ -1,0 +1,32 @@
+### Pivot Table
+
+A Pivot Table is a powerful tool for summarizing, analyzing, exploring, and presenting data. It allows you to automatically sort, count, and total the values in a dataset, as well as calculate the total of particular values within a set. Pivot Tables display these results in a new table that provides a concise summary of the data.
+
+**Operations:**
+1. **Summarizing Data**: Perform operations like sum, average, count, minimum, etc.
+2. **Filtering Data**: Apply filters based on criteria like date, product, or region.
+3. **Grouping Data**: Group data by dates (monthly, quarterly), product, or region.
+4. **Calculating Percentages**: Compute the percentage of totals or percentage changes.
+
+### Pivot Chart
+
+A Pivot Chart is an extension of a Pivot Table that provides a graphical representation of the summarized data. It allows for dynamic data visualization, making it easier to interpret the results.
+
+**Operations:**
+1. **Changing Chart Types**: Choose from various chart types such as column, bar, line, etc.
+2. **Customizing Chart Elements**: Modify elements like titles, legends, data labels, and colors.
+3. **Drilling Down Data**: Interactively explore data points in detail.
+
+### Power Query
+
+Power Query is a tool that allows you to discover, connect, combine, and refine data from various sources. It provides an easy way to import, clean, and transform data before analyzing it in Excel.
+
+**Operations:**
+1. **Merging Queries**: Combine data from different tables or sources.
+2. **Appending Queries**: Stack data from similar tables.
+3. **Unpivoting Columns**: Transform columns into rows for better analysis.
+4. **Creating Calculated Columns**: Add custom calculations and transformations.
+
+---
+
+This structured and detailed description of Pivot Tables, Pivot Charts, and Power Query highlights their functionalities and operations, ensuring clarity and professionalism.
