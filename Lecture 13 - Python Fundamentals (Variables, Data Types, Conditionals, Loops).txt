@@ -1,0 +1,153 @@
+### Python Fundamentals
+
+Python was invented by Guido van Rossum in 1991 and has since become a versatile and powerful programming language widely used for various applications.
+
+**Uses of Python:**
+- Web development
+- Software development
+- Mathematics
+- System scripting
+- Data science
+
+**Why Python:**
+- Python works on different platforms (Windows, Mac, Linux, Raspberry Pi, etc.).
+- Python automatically identifies the types of variables.
+
+### Variables & Data Types
+
+A variable is a name given to a memory location in a program. Python supports various data types:
+
+**1. Integer:**
+Holds numerical values.
+Example: `1, 2, -1`
+
+**Inbuilt Functions and Operations for Integer:**
+```python
+num = 10
+print(abs(num))  # Absolute value
+# Output: 10
+
+print(bin(num))  # Binary representation
+# Output: 0b1010
+
+print(hex(num))  # Hexadecimal representation
+# Output: 0xa
+
+print(pow(num, 2))  # Power function
+# Output: 100
+
+print(divmod(num, 3))  # Quotient & Remainder
+# Output: (3, 1)
+```
+
+**2. Floating Point:**
+Holds decimal numbers.
+Example: `1.1, 24.5`
+
+**Inbuilt Functions and Operations for Float:**
+```python
+price = 99.99
+print(round(price))  # Round
+# Output: 100
+```
+
+**Typecasting:**
+```python
+print(int(price))  # Convert to integer
+# Output: 99
+
+print(float("1234"))  # Convert string to float
+# Output: 1234.0
+```
+
+**3. String:**
+Example: `greeting = "hello world!"`
+
+**Inbuilt Functions and Operations for String:**
+```python
+print(greeting.lower())  # Convert to lower case
+print(greeting.upper())  # Convert to upper case
+print(greeting.replace("world", "python"))  # Replace substring
+print(greeting.split())  # Split string into a list
+print(greeting.find("world"))  # Find the position of substring
+print(len(greeting))  # Length of the string
+```
+
+**4. List:**
+A mutable container to store a set of values of any data type.
+Example: `fruit = ["apples", "banana", "cherry"]`
+
+**Inbuilt Functions and Operations for List:**
+```python
+fruit.append("orange")  # Add at the end
+fruit.extend(["grape", "melon"])  # Add multiple elements at the end
+fruit.remove("banana")  # Remove an element
+fruit.pop()  # Remove the last element
+fruit.sort()  # Sort the list
+print(len(fruit))  # Length of the list
+print(fruit.index("cherry"))  # Find the index of a value
+```
+
+**5. Tuple:**
+An immutable container.
+Example: `coordinates = (10.0, 20.0)`
+
+**Inbuilt Functions and Operations for Tuple:**
+```python
+print(coordinates.count(10.0))  # Count occurrences of a value
+print(coordinates.index(20.0))  # Find the index of a value
+print(len(coordinates))  # Length of the tuple
+
+# Convert tuple to list to modify
+li = list(coordinates)
+print(li)
+# Output: [10.0, 20.0]
+```
+
+**6. Dictionary:**
+A collection of key-value pairs.
+Example: `person = {"name": "Pranav"}`
+
+**Inbuilt Functions and Operations for Dictionary:**
+```python
+print(person.keys())  # Get all keys
+print(person.values())  # Get all values
+print(person.items())  # Get all key-value pairs
+person.update({"age": 25})  # Update dictionary with another dictionary
+person.pop("name")  # Remove a value
+print(len(person))  # Length of the dictionary
+```
+
+**7. Set:**
+A collection of non-repetitive elements.
+Example: `se = {1, 2, 3, 4}`
+
+**Inbuilt Functions and Operations for Set:**
+```python
+print(len(se))  # Length of the set
+se.add(5)  # Add a value
+print(se)
+# Output: {1, 2, 3, 4, 5}
+```
+
+### Conditional Statements
+
+Conditional statements allow for decision-making in code.
+
+**Example:**
+```python
+a = 200
+b = 33
+
+if b > a:
+    print("b is greater than a")
+elif a == b:
+    print("a and b are equal")
+else:
+    print("a is greater than b")
+```
+In this example, the third condition (`else`) is executed because the first two conditions are not met.
+
+---
+
+This refined and professional overview of Python fundamentals covers key concepts, data types, inbuilt functions, and conditional statements, providing a clear and concise understanding for beginners and professionals alike.
