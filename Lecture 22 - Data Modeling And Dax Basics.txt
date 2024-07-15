@@ -1,0 +1,55 @@
+### Data Modeling and DAX Basics
+
+**DAX = Data Analysis Expressions**
+
+#### Key DAX Functions
+
+1. **SUM**
+   - **Function:** SUM(ColumnName)
+   - **Description:** Computes the sum of all numerical values in a specified column.
+   - **Real-Life Scenario:** Calculating total sales revenue from a sales dataset.
+
+2. **COUNT**
+   - **Function:** COUNT(ColumnName)
+   - **Description:** Counts the number of non-blank cells in a specified column.
+   - **Real-Life Scenario:** Determining the number of orders placed by customers.
+
+3. **IF**
+   - **Function:** IF(LogicalTest, ResultIfTrue, ResultIfFalse)
+   - **Description:** Evaluates a condition and returns one value if true, or another if false.
+   - **Real-Life Scenario:** Categorizing sales as "High" or "Low" based on a sales threshold.
+
+#### Real-Life Use Case Scenarios for DAX Functions
+
+1. **Sales Analysis**
+2. **Inventory Management**
+3. **Customer Insights**
+4. **Financial Reporting**
+5. **Human Resources**
+6. **Project Management**
+7. **Marketing Analysis**
+8. **Operational Efficiency**
+
+#### Advantages of Using DAX Functions
+
+1. **Performance Optimization:** Efficiently handles large datasets and complex calculations.
+   
+2. **Data Manipulation:** Enables transformation and manipulation of data to derive meaningful insights.
+   
+3. **Dynamic Calculations:** Allows for dynamic calculations that adapt to changing data and conditions.
+   
+4. **Integration:** Seamlessly integrates with other Microsoft tools and data sources.
+   
+5. **Reusability:** Functions can be reused across different reports and dashboards, reducing redundancy.
+   
+6. **Scalability:** Scales effectively with growing data volumes and business needs.
+   
+7. **Flexibility:** Provides flexibility in creating custom calculations and metrics tailored to specific requirements.
+   
+8. **User-Friendly:** DAX syntax is intuitive and user-friendly, making it accessible to both technical and non-technical users.
+   
+9. **Custom Calculations:** Supports complex business logic and custom calculations beyond basic arithmetic.
+   
+10. **Enhanced Reporting:** Enhances reporting capabilities by enabling sophisticated data analysis and visualization.
+
+By leveraging DAX functions effectively, organizations can harness the power of data to drive informed decisions and gain competitive advantages in various domains of business operations.

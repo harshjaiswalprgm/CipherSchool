@@ -1,0 +1,84 @@
+### Hypothesis Testing & Inferential Statistics
+
+#### Hypothesis Testing
+
+**Definition:**
+Hypothesis testing is a statistical method used to make decisions based on sample data. It evaluates whether there is enough evidence to infer that a certain condition holds true for the entire population.
+
+**Steps in Hypothesis Testing:**
+
+1. **State the Hypotheses:**
+   - **Null Hypothesis (H₀):** There is no effect or difference, often denoted as "no change" or "no difference."
+   - **Alternative Hypothesis (H₁ or Ha):** Contradicts the null hypothesis and states that there is an effect or difference.
+
+2. **Choose a Significance Level (α):**
+   - Typically set at 0.05 or 0.01, representing the probability of rejecting the null hypothesis when it is actually true.
+
+3. **Collect Data and Compute a Test Statistic:**
+   - Calculate a statistic (e.g., mean, proportion) from the sample data to compare against the null hypothesis.
+
+4. **Determine the P-value:**
+   - The P-value is the probability of obtaining results as extreme as observed, assuming the null hypothesis is true. A lower P-value suggests stronger evidence against the null hypothesis.
+
+5. **Make a Decision:**
+   - Compare the P-value to the significance level (α):
+     - If P-value ≤ α, reject the null hypothesis.
+     - If P-value > α, do not reject the null hypothesis.
+
+**Types of Tests:**
+1. **Z-test:** Used for testing the mean of a population when the sample size is large and/or the population standard deviation is known.
+2. **T-test:** Used when the sample size is small (typically < 30) or the population standard deviation is unknown.
+3. **ANOVA (Analysis of Variance):** Used to compare means of more than two groups.
+4. **Chi-square Test:** Used to test the independence of categorical variables.
+
+**Scenario Example:**
+A basketball coach claims that his team scores more than 50 points on average per game over a season. Using data from 5 randomly selected games, we can conduct a hypothesis test to validate this claim.
+
+- **Hypotheses:**
+  - H₀: μ = 50 (Team scores 50 points on average per game)
+  - H₁: μ > 50 (Team scores more than 50 points on average per game)
+
+- **Comparison:**
+  - Compare the sample mean (51.2) with the hypothesized mean (50).
+
+- **Decision:**
+  - Since the sample mean (51.2) exceeds 50, we might lean towards rejecting the null hypothesis, suggesting that the team indeed scores more than 50 points on average per game.
+
+**Real-Life Use Cases:**
+- **A/B Testing (Marketing and Product Development):** Testing different versions of a product or marketing strategy to determine which performs better.
+- **Medicine and Healthcare:** Evaluating the effectiveness of a new drug compared to a placebo in clinical trials.
+
+#### Inferential Statistics
+
+**Key Concepts of Inferential Statistics:**
+
+1. **Population and Sample:**
+   - **Population:** The entire group about which conclusions are drawn.
+   - **Sample:** A subset of the population used to make inferences about the entire group.
+
+2. **Estimation:**
+   - **Point Estimation:** Using sample data to estimate an unknown population parameter (e.g., mean, proportion).
+   - **Interval Estimation (Confidence Intervals):** Providing a range within which the parameter is expected to lie, with a certain degree of confidence (e.g., 95% or 99%).
+
+**Common Point Estimators:**
+- **Sample Mean (¯x):** Estimating the Population Mean (μ).
+- **Sample Proportion (p):** Estimating the Population Proportion (p).
+- **Sample Variance (s²):** Estimating the Population Variance (σ²).
+
+**Example:**
+If we have a sample of students' scores from a class test, the average score calculated from this sample (sample mean) serves as a point estimate of the population mean score, assuming the sample is representative of the entire class.
+
+**Components of Confidence Intervals:**
+- **Confidence Level:** Indicates the probability that the confidence interval contains the true population parameter (e.g., 95% or 99%).
+- **Margin of Error:** The range above and below the point estimate that the true parameter is expected to fall within.
+
+**Formula for Confidence Interval (Population Mean):**
+\[ \text{Confidence Interval} = \bar{x} \pm z \cdot \frac{s}{\sqrt{n}} \]
+
+- Where:
+  - \( \bar{x} \) is the sample mean,
+  - \( z \) is the z-score corresponding to the desired confidence level,
+  - \( s \) is the sample standard deviation,
+  - \( n \) is the sample size.
+
+In conclusion, hypothesis testing and inferential statistics are powerful tools used to draw conclusions about populations based on sample data. They provide a structured approach to making data-driven decisions in various fields, from business and marketing to healthcare and beyond.

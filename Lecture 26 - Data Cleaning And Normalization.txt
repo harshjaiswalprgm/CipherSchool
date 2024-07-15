@@ -1,0 +1,127 @@
+### Data Cleaning and Normalization
+
+**Definition:**
+
+- **Data Cleaning:** Data cleaning is the process of identifying and rectifying errors and inconsistencies in data to enhance its quality and reliability. This involves tasks such as handling missing values, removing duplicates, correcting errors, and ensuring uniformity in data formats.
+
+- **Normalization:** Normalization refers to scaling numerical data to a standard range, typically [0, 1], or transforming it to have a mean of 0 and a standard deviation of 1. This process is crucial for improving the performance of machine learning algorithms and ensuring that all features contribute equally to the analysis.
+
+**Use Cases in Real Life:**
+
+- **Preparing Data for Machine Learning:** Clean data by addressing missing values and duplicates. Normalize features to facilitate accurate comparisons and enhance algorithm performance.
+  
+- **Financial Data Analysis:** Correct errors in financial records and fill missing data points. Normalize financial metrics to facilitate meaningful comparisons across different scales.
+  
+- **Customer Data Management:** Ensure consistency in customer databases by rectifying errors and standardizing data formats. Normalize customer attributes like age and income for effective segmentation and analysis.
+
+**Loading the Dataset:**
+
+```python
+import pandas as pd
+
+# Load the dataset
+df = pd.read_csv('sample_data.csv')
+print(df)
+```
+
+**Identifying Missing Values:**
+
+```python
+# Check for missing values
+print(df.isnull().sum())
+
+# View data types and non-null counts
+df.info()
+```
+
+**Handling Missing Values:**
+
+- **Removing Rows with Missing Values:**
+  
+```python
+# Remove rows with any missing values
+df_cleaned = df.dropna()
+print(df_cleaned)
+```
+
+- **Filling Missing Values:**
+
+```python
+# Fill missing values with the mean of each column
+df_filled = df.fillna({
+    'Age': df['Age'].mean(),
+    'Salary': df['Salary'].mean()
+})
+print(df_filled)
+```
+
+- **Forward Fill and Backward Fill Methods:**
+
+```python
+# Forward fill method
+df_ffill = df.fillna(method='ffill')
+print(df_ffill)
+
+# Backward fill method
+df_bfill = df.fillna(method='bfill')
+print(df_bfill)
+```
+
+**Removing Duplicates:**
+
+```python
+# Add duplicate rows for demonstration
+df = pd.concat([df, df.iloc[[0]], df.iloc[[1]]], ignore_index=True)
+print('Before removing duplicates:\n', df)
+
+# Remove duplicate rows
+df_no_duplicates = df.drop_duplicates()
+print('After removing duplicates:\n', df_no_duplicates)
+```
+
+**Replacing Incorrect Values:**
+
+```python
+# Replace incorrect values in the 'Department' column
+df_corrected = df.replace({'Department': {'HR': 'Human Resources', 'Sales': 'Sales'}})
+print(df_corrected)
+```
+
+**Ensuring Consistency:**
+
+```python
+# Convert all department names to lowercase for consistency
+df['Department'] = df['Department'].str.lower()
+print(df)
+```
+
+**Min-Max Normalization:**
+
+**Definition:**
+Min-max normalization rescales numeric features to a fixed range, typically [0, 1], using the formula:
+
+\[ X_{\text{normalized}} = \frac{X - X_{\text{min}}}{X_{\text{max}} - X_{\text{min}}} \]
+
+Where:
+- \( X \) is the original value.
+- \( X_{\text{min}} \) is the minimum value of the feature.
+- \( X_{\text{max}} \) is the maximum value of the feature.
+- \( X_{\text{normalized}} \) is the normalized value.
+
+**Applying Min-Max Normalization:**
+
+```python
+# Apply Min-Max normalization
+df_normalized = df.copy()
+for col in ['Age', 'Salary']:
+    df_normalized[col] = (df[col] - df[col].min()) / (df[col].max() - df[col].min())
+
+# Print original and normalized dataframes
+print("Original DataFrame:")
+print(df)
+print("\nNormalized DataFrame:")
+print(df_normalized)
+```
+
+**Conclusion:**
+Data cleaning and normalization are essential preprocessing steps in data analysis and machine learning. They ensure data accuracy, reliability, and compatibility with analytical tools, thereby improving the quality and validity of insights derived from the data. By following structured methods like those outlined above, analysts can effectively manage and prepare data for a wide range of applications in various domains.

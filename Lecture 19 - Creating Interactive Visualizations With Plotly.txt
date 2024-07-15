@@ -1,0 +1,92 @@
+### Creating Interactive Visualizations with Plotly
+
+#### Installing Plotly
+First, install Plotly using pip:
+```python
+pip install plotly
+```
+
+#### Importing Necessary Libraries
+```python
+import pandas as pd
+import plotly.express as px
+```
+
+#### Loading the Dataset
+```python
+# Load the dataset
+df = pd.read_csv('/content/Sales.csv')
+print(df.head())
+```
+
+### Creating Various Plots with Plotly
+
+#### Line Plot
+Create a line plot to visualize sales trends over time:
+```python
+# Creating a line plot
+fig = px.line(df, x='Date', y='Sales', title='Sales Trend Over Time', markers=True)
+fig.show()
+```
+
+#### Bar Chart
+Create a bar chart to visualize sales by region:
+```python
+# Creating a bar chart
+fig = px.bar(df, x='Region', y='Sales', title='Sales by Region', color='Region')
+fig.show()
+```
+
+#### Scatter Plot
+Create a scatter plot to visualize the relationship between sales and profit:
+```python
+# Creating a scatter plot
+fig = px.scatter(df, x='Sales', y='Profit', title='Sales vs Profit', color='Region', size='Quantity', hover_data=['Product'])
+fig.show()
+```
+
+#### Histogram
+Create a histogram to visualize the distribution of sales:
+```python
+# Creating a histogram
+fig = px.histogram(df, x='Sales', title='Distribution of Sales', nbins=10)
+fig.show()
+```
+
+#### Pie Chart
+Create a pie chart to visualize the sales distribution by product:
+```python
+# Creating a pie chart
+fig = px.pie(df, values='Sales', names='Product', title='Sales Distribution by Product')
+fig.show()
+```
+
+#### Interactive Line Chart
+Create an interactive line chart to visualize sales trends over time with additional information:
+```python
+# Creating an interactive line chart
+fig = px.line(df, x='Date', y='Sales', title='Interactive Sales Trend Over Time', markers=True, color='Region', hover_data=['Product', 'Quantity', 'Profit'])
+fig.show()
+```
+
+#### Geographical Map
+Create a geographical map to visualize the population by state:
+```python
+# Sample data
+data = {
+    'City': ['New York', 'Los Angeles', 'Chicago', 'Houston', 'Phoenix'],
+    'State': ['NY', 'CA', 'IL', 'TX', 'AZ'],
+    'Population': [8419000, 3980400, 2716000, 2328000, 1690000]
+}
+
+# Creating the DataFrame
+df = pd.DataFrame(data)
+
+# Creating a geographical map
+fig = px.choropleth(df, locations='State', locationmode='USA-states', color='Population', scope='usa', title='Population by State')
+fig.show()
+```
+
+### Summary
+
+Plotly is a powerful library for creating interactive visualizations. By leveraging Plotly, you can create a wide variety of charts, including line plots, bar charts, scatter plots, histograms, pie charts, and geographical maps. These visualizations help in understanding and presenting data insights effectively.

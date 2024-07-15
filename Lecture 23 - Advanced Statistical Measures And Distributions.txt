@@ -1,0 +1,188 @@
+
+
+
+
+### Advanced Statistical Measures and Distributions
+
+#### Descriptive Statistics
+
+**Mean**
+
+**Definition:**
+- The mean, or average, of a dataset is calculated by summing all values and dividing by the count of values.
+
+**Use Case:**
+- Market analysis uses the mean to summarize typical values in datasets, such as average customer age or income.
+
+```python
+import pandas as pd
+
+# Sample data
+data = {
+    'Age': [25, 30, 35, 50, 28, 40, 50, 60, 32, 45],
+    'Salary': [50000, 120000, 70000, 60000, 80000, 55000, 85000, 90000, 150000, 62000]
+}
+df = pd.DataFrame(data)
+
+# Calculate mean
+mean_age = df['Age'].mean()
+mean_salary = df['Salary'].mean()
+
+print("Mean Age:", mean_age)
+print("Mean Salary:", mean_salary)
+```
+
+**Median**
+
+**Definition:**
+- The median is the middle value in a sorted dataset. It is less affected by outliers compared to the mean.
+
+**Use Case:**
+- Median household income uses the median to represent the central tendency of income data.
+
+```python
+# Calculate median
+median_age = df['Age'].median()
+median_salary = df['Salary'].median()
+
+print("Median Age:", median_age)
+print("Median Salary:", median_salary)
+```
+
+**Mode**
+
+**Definition:**
+- The mode is the most frequently occurring value in a dataset.
+
+**Use Case:**
+- Retail uses the mode to identify the most popular products or transaction amounts.
+
+```python
+# Calculate mode
+mode_age = df['Age'].mode()[0]
+mode_salary = df['Salary'].mode()[0]
+
+print("Mode Age:", mode_age)
+print("Mode Salary:", mode_salary)
+```
+
+**Standard Deviation**
+
+**Definition:**
+- The standard deviation measures the dispersion of values around the mean, indicating data variability.
+
+**Use Case:**
+- Finance uses standard deviation to assess risk or volatility in investments.
+
+```python
+# Calculate standard deviation
+std_age = df['Age'].std()
+std_salary = df['Salary'].std()
+
+print("Standard Deviation Age:", std_age)
+print("Standard Deviation Salary:", std_salary)
+```
+
+**Variance**
+
+**Definition:**
+- Variance quantifies the spread of values from the mean, calculated as the average of squared differences from the mean.
+
+**Use Case:**
+- Finance uses variance to analyze the variability of investment returns.
+
+```python
+# Calculate variance
+var_age = df['Age'].var()
+var_salary = df['Salary'].var()
+
+print("Variance Age:", var_age)
+print("Variance Salary:", var_salary)
+```
+
+#### Probability Distributions
+
+**Normal Distribution**
+
+**Definition:**
+- The normal distribution, or Gaussian distribution, is a continuous probability distribution that is symmetric around the mean.
+
+**Use Case:**
+- Finance uses the normal distribution to model investment returns, and quality control uses it to monitor product defects.
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Generate data for normal distribution
+mu, sigma = 0, 0.1
+s = np.random.normal(mu, sigma, 1000)
+
+# Plot histogram and the normal distribution curve
+count, bins, ignored = plt.hist(s, 30, density=True)
+plt.plot(bins, 1/(sigma * np.sqrt(2 * np.pi)) * np.exp(-(bins - mu)**2 / (2 * sigma**2)), linewidth=2, color='r')
+plt.title('Normal Distribution')
+plt.show()
+```
+
+**Binomial Distribution**
+
+**Definition:**
+- The binomial distribution is a discrete probability distribution that models the number of successes in a fixed number of independent trials.
+
+**Use Case:**
+- Quality control uses the binomial distribution to predict the number of defective items in a batch of products.
+
+```python
+# Generate data for binomial distribution
+n, p = 10, 0.5
+binomial = np.random.binomial(n, p, 1000)
+
+# Plot histogram for binomial distribution
+plt.hist(binomial, bins=10, density=True, alpha=0.6, color='b')
+plt.title('Binomial Distribution')
+plt.show()
+```
+
+#### Quartiles
+
+**Definition:**
+- Quartiles divide a dataset into four equal parts, providing insights into data distribution and identifying outliers.
+
+**Use Case:**
+- Quartiles are crucial in understanding data spread and presence of outliers.
+
+```python
+# Calculate quartiles and IQR
+data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Q1 = np.percentile(data, 25)
+Q2 = np.median(data)
+Q3 = np.percentile(data, 75)
+IQR = Q3 - Q1
+
+print(f"Q1: {Q1}")
+print(f"Q2 (Median): {Q2}")
+print(f"Q3: {Q3}")
+print(f"IQR: {IQR}")
+```
+
+#### Z-Scores
+
+**Definition:**
+- A Z-score measures how many standard deviations a data point is from the mean, facilitating comparison across different datasets.
+
+**Use Case:**
+- Z-scores help identify outliers and compare data points from different normal distributions.
+
+```python
+# Calculate Z-scores
+mean = np.mean(data)
+std_dev = np.std(data)
+z_scores = [(x - mean) / std_dev for x in data]
+
+print(f"Mean: {mean}")
+print(f"Standard Deviation: {std_dev}")
+print("Z-scores:", z_scores)
+```
+
+By understanding and applying these statistical measures and distributions, analysts and researchers can effectively analyze data, derive insights, and make informed decisions across various domains, from finance and marketing to quality control and human resources.
