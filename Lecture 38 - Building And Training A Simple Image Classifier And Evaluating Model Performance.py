@@ -1,6 +1,3 @@
-Your code looks good for performing various image processing tasks using OpenCV and extracting HOG features with `skimage`. There are a few improvements and corrections to be made, such as ensuring the paths to the images are correct, using consistent variable names, and ensuring all necessary libraries are imported. Here’s the corrected and organized version:
-
-```python
 import cv2
 from skimage.feature import hog
 import matplotlib.pyplot as plt
@@ -80,17 +77,17 @@ if image is not None:
     gray_image = process_image(image)
     apply_filters(image, gray_image)
     extract_and_display_hog(image_path)
-```
+
 
 ### Explanation of Changes:
 
-1. **Error Handling**: Added checks to ensure the image is correctly loaded.
-2. **Consistent Variable Names**: Ensured the same variable names are used consistently across different functions.
-3. **Modular Functions**: Organized the code into modular functions for better readability and reusability.
-4. **Improved Functionality**: Ensured that each function focuses on a specific task, making the code easier to debug and maintain.
+# 1. **Error Handling**: Added checks to ensure the image is correctly loaded.
+# 2. **Consistent Variable Names**: Ensured the same variable names are used consistently across different functions.
+# 3. **Modular Functions**: Organized the code into modular functions for better readability and reusability.
+# 4. **Improved Functionality**: Ensured that each function focuses on a specific task, making the code easier to debug and maintain.
 
-This code should be placed in a script file and run. Ensure that the path to the image is correctly specified. The functions will perform the following tasks:
-1. Read and display the original image.
-2. Convert the image to grayscale, resize it, and draw shapes on it.
-3. Apply Gaussian blur and Canny edge detection, displaying the results.
-4. Extract and display HOG features from the grayscale image.
+# This code should be placed in a script file and run. Ensure that the path to the image is correctly specified. The functions will perform the following tasks:
+# 1. Read and display the original image.
+# 2. Convert the image to grayscale, resize it, and draw shapes on it.
+# 3. Apply Gaussian blur and Canny edge detection, displaying the results.
+# 4. Extract and display HOG features from the grayscale image.

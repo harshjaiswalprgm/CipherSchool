@@ -1,12 +1,12 @@
-Your code for loading the Fashion MNIST dataset, preprocessing it, extracting HOG features, training an SVM classifier, and visualizing the results looks quite solid. However, there are a few minor corrections and improvements to be made. Here's the corrected version:
+# Your code for loading the Fashion MNIST dataset, preprocessing it, extracting HOG features, training an SVM classifier, and visualizing the results looks quite solid. However, there are a few minor corrections and improvements to be made. Here's the corrected version:
 
-1. **Renamed variables for consistency.**
-2. **Fixed the SVM variable name in the prediction step.**
-3. **Removed unnecessary comments.**
+# 1. **Renamed variables for consistency.**
+# 2. **Fixed the SVM variable name in the prediction step.**
+# 3. **Removed unnecessary comments.**
 
-Here is the corrected code:
+# Here is the corrected code:
 
-```python
+# ```python
 from tensorflow.keras.datasets import fashion_mnist
 import numpy as np
 import matplotlib.pyplot as plt
@@ -91,13 +91,13 @@ def plot_output_images(images, true_labels, predicted_labels, class_names):
     plt.show()
 
 # Plot some test images along with their true and predicted labels
-plot_output_images(x_test[:10], y_test[:10], y_pred[:10], class_names)
-```
+# plot_output_images(x_test[:10], y_test[:10], y_pred[:10], class_names)
+# ```
 
-### Explanation of Changes:
+# ### Explanation of Changes:
 
-1. **Removed commented-out reshape code**: The reshaping logic was fine, and the commented code was redundant.
-2. **Consistent Naming**: Ensured variable names are consistent, especially for the classifier (used `classifier` instead of `svm` in predictions).
-3. **Printing Accuracy**: Included labels for accuracy print statements for clarity.
+# 1. **Removed commented-out reshape code**: The reshaping logic was fine, and the commented code was redundant.
+# 2. **Consistent Naming**: Ensured variable names are consistent, especially for the classifier (used `classifier` instead of `svm` in predictions).
+# 3. **Printing Accuracy**: Included labels for accuracy print statements for clarity.
 
-This corrected version should work without errors and perform the desired operations on the Fashion MNIST dataset.
+# This corrected version should work without errors and perform the desired operations on the Fashion MNIST dataset.
