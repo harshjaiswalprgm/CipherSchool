@@ -17,7 +17,7 @@ def read_and_display_image(image_path):
     
     return image
 
-# Function to perform various image processing tasks
+# Function to perform various image processing taskss
 def process_image(image):
     # Convert the image to grayscale
     gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
