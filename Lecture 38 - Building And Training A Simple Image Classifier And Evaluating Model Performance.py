@@ -4,7 +4,7 @@ import numpy as np
 from skimage.feature import hog
 import matplotlib.pyplot as plt
 
-# Function to download and convert an image from a URL
+# Function to download and convert an image from a URL 
 def read_image_from_url(url):
     try:
         # Fetch image from URL
@@ -31,7 +31,8 @@ def read_image_from_url(url):
 # Function to perform various image processing tasks
 def process_image(image):
     # Convert the image to grayscale
-    gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+    gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)  #formula--to convert into gryscale
+    #Gray=0.299⋅R+0.587⋅G+0.114⋅B
     
     # Resize the image to 100x100
     resized_image = cv2.resize(image, (100, 100))
@@ -83,3 +84,5 @@ if image is not None:
     gray_image = process_image(image)
     apply_filters(image, gray_image)
     extract_and_display_hog(gray_image)
+
+
