@@ -1,23 +1,34 @@
 import cv2
+import requests
+import numpy as np
 from skimage.feature import hog
 import matplotlib.pyplot as plt
 
-# Function to read and display an image
-def read_and_display_image(image_path):
-    # Read an image
-    image = cv2.imread(image_path)
-    if image is None:
-        print("Error: Could not open or find the image.")
-        return
-    
-    # Display the image
-    cv2.imshow('Image', image)
-    cv2.waitKey(0)
-    cv2.destroyAllWindows()
-    
-    return image
+# Function to download and convert an image from a URL
+def read_image_from_url(url):
+    try:
+        # Fetch image from URL
+        response = requests.get(url)
+        image_array = np.asarray(bytearray(response.content), dtype=np.uint8)
+        
+        # Decode the image from the array into an OpenCV image
+        image = cv2.imdecode(image_array, cv2.IMREAD_COLOR)
+        
+        if image is None:
+            print("Error: Could not open or find the image from URL.")
+            return None
+        
+        # Display the image
+        cv2.imshow('Image', image)
+        cv2.waitKey(0)
+        cv2.destroyAllWindows()
+        
+        return image
+    except Exception as e:
+        print(f"Error: {str(e)}")
+        return None
 
-# Function to perform various image processing taskss
+# Function to perform various image processing tasks
 def process_image(image):
     # Convert the image to grayscale
     gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
@@ -52,13 +63,7 @@ def apply_filters(image, gray_image):
     cv2.destroyAllWindows()
 
 # Function to extract and display HOG features
-def extract_and_display_hog(image_path):
-    # Read the image in grayscale
-    image = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)
-    if image is None:
-        print("Error: Could not open or find the image.")
-        return
-    
+def extract_and_display_hog(image):
     # Resize the image
     image = cv2.resize(image, (128, 64))
     
@@ -71,23 +76,10 @@ def extract_and_display_hog(image_path):
     plt.show()
 
 # Main code execution
-image_path = 'path_to_image.jpg'
-image = read_and_display_image(image_path)
+url = 'https://upload.wikimedia.org/wikipedia/commons/4/41/Sunflower_from_Silesia2.jpg'  # Replace this with a valid image URL
+image = read_image_from_url(url)
+
 if image is not None:
     gray_image = process_image(image)
     apply_filters(image, gray_image)
-    extract_and_display_hog(image_path)
-
-
-### Explanation of Changes:
-
-# 1. **Error Handling**: Added checks to ensure the image is correctly loaded.
-# 2. **Consistent Variable Names**: Ensured the same variable names are used consistently across different functions.
-# 3. **Modular Functions**: Organized the code into modular functions for better readability and reusability.
-# 4. **Improved Functionality**: Ensured that each function focuses on a specific task, making the code easier to debug and maintain.
-
-# This code should be placed in a script file and run. Ensure that the path to the image is correctly specified. The functions will perform the following tasks:
-# 1. Read and display the original image.
-# 2. Convert the image to grayscale, resize it, and draw shapes on it.
-# 3. Apply Gaussian blur and Canny edge detection, displaying the results.
-# 4. Extract and display HOG features from the grayscale image.
+    extract_and_display_hog(gray_image)

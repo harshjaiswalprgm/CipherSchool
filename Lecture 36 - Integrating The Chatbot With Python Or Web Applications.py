@@ -31,52 +31,52 @@ if __name__ == '__main__':
     app.run(debug=True)
 
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Flask Chatbot</title>
-    <style>
-        .chat-container { width: 50%; margin: 0 auto; }
-        .message { margin: 10px 0; }
-        .user-message { text-align: right; }
-    </style>
-</head>
-<body>
-    <div class="chat-container">
-        <h1>Chat with our bot</h1>
-        <div id="chat-box"></div>
-        <input type="text" id="user-input" placeholder="Type a message...">
-        <button onclick="sendMessage()">Send</button>
-    </div>
+# <!DOCTYPE html>
+# <html>
+# <head>
+#     <title>Flask Chatbot</title>
+#     <style>
+#         .chat-container { width: 50%; margin: 0 auto; }
+#         .message { margin: 10px 0; }
+#         .user-message { text-align: right; }
+#     </style>
+# </head>
+# <body>
+#     <div class="chat-container">
+#         <h1>Chat with our bot</h1>
+#         <div id="chat-box"></div>
+#         <input type="text" id="user-input" placeholder="Type a message...">
+#         <button onclick="sendMessage()">Send</button>
+#     </div>
 
-    <script>
-        function sendMessage() {
-            var userInput = document.getElementById('user-input').value;
-            var chatBox = document.getElementById('chat-box');
+#     <script>
+#         function sendMessage() {
+#             var userInput = document.getElementById('user-input').value;
+#             var chatBox = document.getElementById('chat-box');
             
-            var userMessageDiv = document.createElement('div');
-            userMessageDiv.className = 'message user-message';
-            userMessageDiv.innerHTML = 'You: ' + userInput;
-            chatBox.appendChild(userMessageDiv);
+#             var userMessageDiv = document.createElement('div');
+#             userMessageDiv.className = 'message user-message';
+#             userMessageDiv.innerHTML = 'You: ' + userInput;
+#             chatBox.appendChild(userMessageDiv);
             
-            fetch('/chat', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                body: 'message=' + encodeURIComponent(userInput)
-            })
-            .then(response => response.json())
-            .then(data => {
-                var botMessageDiv = document.createElement('div');
-                botMessageDiv.className = 'message bot-message';
-                botMessageDiv.innerHTML = 'Bot: ' + data.reply;
-                chatBox.appendChild(botMessageDiv);
-            });
+#             fetch('/chat', {
+#                 method: 'POST',
+#                 headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+#                 body: 'message=' + encodeURIComponent(userInput)
+#             })
+#             .then(response => response.json())
+#             .then(data => {
+#                 var botMessageDiv = document.createElement('div');
+#                 botMessageDiv.className = 'message bot-message';
+#                 botMessageDiv.innerHTML = 'Bot: ' + data.reply;
+#                 chatBox.appendChild(botMessageDiv);
+#             });
             
-            document.getElementById('user-input').value = '';
-        }
-    </script>
-</body>
-</html>
+#             document.getElementById('user-input').value = '';
+#         }
+#     </script>
+# </body>
+# </html>
 
 
 ### 2. Dash-Based Chatbot
